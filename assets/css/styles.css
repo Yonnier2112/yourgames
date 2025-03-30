@@ -1,0 +1,88 @@
+/* Variables de colores y fuentes */
+:root {
+    --yg-primary: #ff4655;  /* Rojo gamer */
+    --yg-dark: #0f1923;     /* Fondo oscuro */
+    --yg-light: #f8f8f8;    /* Texto claro */
+    --yg-accent: #1a2a3a;   /* Secundario oscuro */
+    --yg-font-title: 'Orbitron', sans-serif;
+    --yg-font-text: 'Roboto', sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--yg-dark);
+    color: var(--yg-light);
+    font-family: var(--yg-font-text);
+}
+
+/* HEADER */
+.yg-header {
+    background-color: var(--yg-dark);
+    border-bottom: 2px solid var(--yg-primary);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.yg-header__container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.yg-header__logo a {
+    color: var(--yg-light);
+    font-family: var(--yg-font-title);
+    font-size: 2rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.yg-header__logo span {
+    color: var(--yg-primary);
+}
+
+/* NAVEGACIÓN */
+.yg-nav__list {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.yg-nav__link {
+    color: var(--yg-light);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.yg-nav__link:hover {
+    background-color: var(--yg-primary);
+    color: var(--yg-dark);
+}
+
+.yg-nav__link--active {
+    background-color: var(--yg-primary);
+    color: var(--yg-dark);
+}
+
+/* Botón tema (opcional) */
+.yg-header__theme-btn {
+    background: none;
+    border: none;
+    color: var(--yg-light);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
