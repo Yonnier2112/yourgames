@@ -1,9 +1,9 @@
 /* Variables de colores y fuentes */
 :root {
-    --yg-primary: #ff4655;  /* Rojo gamer */
-    --yg-dark: #0f1923;     /* Fondo oscuro */
+    --yg-primary: #ff4646;  /* Rojo gamer */
+    --yg-dark: #0a1118;     /* Fondo oscuro */
     --yg-light: #f8f8f8;    /* Texto claro */
-    --yg-accent: #1a2a3a;   /* Secundario oscuro */
+    --yg-accent: #070d13;   /* Secundario oscuro */
     --yg-font-title: 'Orbitron', sans-serif;
     --yg-font-text: 'Roboto', sans-serif;
 }
@@ -85,4 +85,96 @@ body {
     color: var(--yg-light);
     font-size: 1.2rem;
     cursor: pointer;
+}
+/* BANNER GAMER */
+.yg-banner {
+    background: linear-gradient(135deg, #0f1923 0%, #1a2a3a 100%);
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid var(--yg-primary);
+}
+
+.yg-banner::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 70, 85, 0.1) 0%,
+        rgba(0, 212, 255, 0.1) 50%,
+        rgba(255, 70, 85, 0.1) 100%
+    );
+    animation: yg-rotate-gradient 8s linear infinite;
+    z-index: 0;
+}
+
+.yg-banner__content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.yg-banner__title {
+    font-family: var(--yg-font-title);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--yg-light);
+    text-shadow: 0 0 10px rgba(255, 70, 85, 0.7);
+    animation: yg-text-glow 2s ease-in-out infinite alternate;
+}
+
+.yg-banner__title span {
+    color: var(--yg-primary);
+}
+
+.yg-banner__text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--yg-light);
+    opacity: 0.9;
+}
+
+.yg-banner__button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--yg-primary);
+    color: var(--yg-dark);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.yg-banner__button:hover {
+    background-color: transparent;
+    border-color: var(--yg-primary);
+    color: var(--yg-primary);
+    box-shadow: 0 0 15px var(--yg-primary);
+}
+
+/* ANIMACIONES */
+@keyframes yg-rotate-gradient {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes yg-text-glow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 70, 85, 0.7);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 70, 85, 0.9), 0 0 30px rgba(255, 70, 85, 0.5);
+    }
 }
