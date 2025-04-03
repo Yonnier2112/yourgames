@@ -207,6 +207,8 @@ body {
     border: 1px solid var(--yq-primary);
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
+    color: var(--yq-secondary);
+    text-decoration: none;
 }
 
 .yq-game-card:hover {
@@ -412,6 +414,8 @@ body {
 
 .yq-footer-col {
     margin-bottom: 2rem;
+    padding-bottom: 0; /* Asegura que no haya padding inferior */
+    border-bottom: none; /* Elimina cualquier borde inferior */
 }
 
 .yq-footer-logo a {
@@ -500,11 +504,256 @@ body {
     color: var(--yq-primary);
 }
 
-.yq-copyright-link {
+.yq-copyright-link, .yq-footer-link {
     color: var(--yq-secondary);
     text-decoration: none;
 }
 
 .yq-copyright-link:hover {
     text-decoration: underline;
+}
+
+
+.yq-footer-links {
+    margin-top: 1.5rem; /* Agrega espacio arriba de la lista */
+    padding-left: 0; /* Opcional: quita el padding izquierdo si lo prefieres */
+}
+
+.yq-footer-link {
+    margin-bottom: 1rem; /* Aumenta el espacio entre enlaces */
+    display: block; /* Hace que cada enlace ocupe su propia línea */
+}
+/* ESTILOS PARA DETALLES DE JUEGO */
+.yq-game-details {
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0f1923 100%);
+    padding: 2rem;
+    color: white;
+}
+
+.yq-game-hero {
+    display: flex;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    align-items: flex-start;
+}
+
+.yq-game-cover {
+    position: relative;
+    flex: 1;
+    border: 3px solid var(--yq-primary);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 0, 85, 0.3);
+}
+
+.yq-game-cover img {
+    width: 100%;
+    display: block;
+}
+
+.yq-game-rating {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    color: var(--yq-secondary);
+    border: 1px solid var(--yq-secondary);
+}
+
+.yq-game-info {
+    flex: 1;
+    padding: 1rem;
+}
+
+.yq-game-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: var(--yq-secondary);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+    position: relative;
+}
+
+.yq-game-badge {
+    display: inline-block;
+    background: var(--yq-primary);
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    margin-left: 1rem;
+    vertical-align: middle;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.yq-game-meta {
+    margin-bottom: 1.5rem;
+}
+
+.yq-game-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    border: 1px solid var(--yq-primary);
+}
+
+.yq-game-price {
+    margin: 2rem 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.yq-price-original {
+    text-decoration: line-through;
+    color: #777;
+    margin-right: 1rem;
+}
+
+.yq-price-discount {
+    font-size: 2rem;
+    color: var(--yq-secondary);
+    margin-right: 1rem;
+}
+
+.yq-price-save {
+    color: var(--yq-primary);
+}
+
+.yq-buy-btn {
+    background: var(--yq-gradient);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.yq-buy-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px var(--yq-primary);
+}
+
+.yq-game-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.yq-feature {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid rgba(0, 255, 204, 0.1);
+    transition: all 0.3s;
+}
+
+.yq-feature:hover {
+    border-color: var(--yq-primary);
+    transform: translateY(-5px);
+}
+
+.yq-feature-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Secciones de contenido */
+.yq-game-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.yq-game-section {
+    margin-bottom: 3rem;
+}
+
+.yq-section-title {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--yq-primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.yq-section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--yq-secondary);
+    transform: translateY(-50%);
+}
+
+.yq-game-description {
+    line-height: 1.8;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+.yq-game-trailer {
+    border: 3px solid var(--yq-primary);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.2);
+}
+
+.yq-game-requirements {
+    display: flex;
+    gap: 2rem;
+}
+
+.yq-requirements-col {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--yq-primary);
+}
+
+.yq-requirements-col h3 {
+    color: var(--yq-secondary);
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.yq-requirements-col ul {
+    list-style-type: none;
+}
+
+.yq-requirements-col li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.yq-requirements-col li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--yq-primary);
 }
